@@ -27,7 +27,14 @@ body {
   border-color: #FF0000;
 }
 
+
 #score-counter,
 #question-counter {
   color: #808080;
+}
+
+.correct-answer {
+  background-color: #00FF00 !important;
+  border-color: #00FF00 !important;
+  color: #FFFFFF !important;
 }

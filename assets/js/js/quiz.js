@@ -51,11 +51,15 @@ function checkAnswer(selectedOption) {
   if (selectedOption === correctAnswer) {
     incrementScore(1);
     console.log('Correct answer.');
+    document.getElementById(`option-${selectedOption}`).classList.add('correct-answer');
   } else {
     console.log('Wrong answer.');
   }
-  questionCounter++;
-  nextQuestion();
+  setTimeout(() => {
+    document.getElementById(`option-${selectedOption}`).classList.remove('correct-answer');
+    questionCounter++;
+    nextQuestion();
+  }, 1000); // Wait 1 second before moving to the next question
 }
 
 playAgainButton.addEventListener('click', () => {
