@@ -5,6 +5,7 @@ startButton.addEventListener('click', () => {
   console.log('Test start button.');
   startButton.style.display = 'none';
   optionsContainer.style.display = 'block';
+  nextQuestion();
 });
 
 let questionCounter = 0;
