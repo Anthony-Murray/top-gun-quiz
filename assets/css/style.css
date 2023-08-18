@@ -1,0 +1,33 @@
+body {
+  background-image: url('../../assets/images/quiz_background.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #36454F;
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.btn-primary,
+.btn-success,
+.btn-outline-primary {
+  background-color: #000080;
+  border-color: #000080;
+  color: #FFFFFF;
+
+}
+
+.btn-primary:hover,
+.btn-success:hover,
+.btn-outline-primary:hover {
+  background-color: #FF0000;
+  border-color: #FF0000;
+}
+
+#score-counter,
+#question-counter {
+  color: #808080;
+}
