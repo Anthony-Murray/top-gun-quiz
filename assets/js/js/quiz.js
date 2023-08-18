@@ -1,5 +1,7 @@
 const startButton = document.getElementById('start-btn');
 const optionsContainer = document.getElementById('options-container');
+const option0Button = document.getElementById('option-0');
+option0Button.addEventListener('click', () => { console.log('Option 0 clicked'); });
 
 startButton.addEventListener('click', () => {
   console.log('Test start button.');
