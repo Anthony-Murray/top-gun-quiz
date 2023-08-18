@@ -29,6 +29,9 @@ function nextQuestion() {
 
   if (questionCounter >= 5) {
     console.log('Quiz over');
+    document.getElementById('quiz-question').innerText = 'Quiz over! Your final score is ' + score + '/5';
+    document.getElementById('options-container').style.display = 'none';
+    document.getElementById('play-again-btn').style.display = 'block';
     return;
   }
 
