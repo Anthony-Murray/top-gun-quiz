@@ -9,6 +9,7 @@ option2Button.addEventListener('click', () => { checkAnswer(2); });
 const option3Button = document.getElementById('option-3');
 option3Button.addEventListener('click', () => { checkAnswer(3); });
 
+
 startButton.addEventListener('click', () => {
   console.log('Test start button.');
   startButton.style.display = 'none';
@@ -25,6 +26,14 @@ function incrementScore(points) {
 }
 
 function nextQuestion() {
+
+  if (questionCounter >= 5) {
+    console.log('Quiz over');
+    return;
+  }
+
+   document.getElementById('question-counter').innerText = `Question Number: ${questionCounter + 1}/5`;
+
   const currentQuestion = quizQuestions[questionCounter];
   document.getElementById('quiz-question').innerText = currentQuestion.question;
   document.getElementById('option-0').innerText = currentQuestion.options[0];
@@ -44,7 +53,6 @@ function checkAnswer(selectedOption) {
   questionCounter++;
   nextQuestion();
 }
-
 
 
 
