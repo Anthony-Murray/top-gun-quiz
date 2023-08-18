@@ -1,13 +1,13 @@
 const startButton = document.getElementById('start-btn');
 const optionsContainer = document.getElementById('options-container');
 const option0Button = document.getElementById('option-0');
-option0Button.addEventListener('click', () => { console.log('Option 0 clicked'); });
+option0Button.addEventListener('click', () => { checkAnswer(0); });
 const option1Button = document.getElementById('option-1');
-option1Button.addEventListener('click', () => { console.log('Option 1 clicked'); });
+option1Button.addEventListener('click', () => { checkAnswer(1); });
 const option2Button = document.getElementById('option-2');
-option2Button.addEventListener('click', () => { console.log('Option 2 clicked'); });
+option2Button.addEventListener('click', () => { checkAnswer(2); });
 const option3Button = document.getElementById('option-3');
-option3Button.addEventListener('click', () => { console.log('Option 3 clicked'); });
+option3Button.addEventListener('click', () => { checkAnswer(3); });
 
 startButton.addEventListener('click', () => {
   console.log('Test start button.');
@@ -25,6 +25,17 @@ function nextQuestion() {
   document.getElementById('option-1').innerText = currentQuestion.options[1];
   document.getElementById('option-2').innerText = currentQuestion.options[2];
   document.getElementById('option-3').innerText = currentQuestion.options[3];
+}
+
+function checkAnswer(selectedOption) {
+  const correctAnswer = quizQuestions[questionCounter].answer;
+  if (selectedOption === correctAnswer) {
+    console.log('Correct answer.');
+  } else {
+    console.log('Wrong answer.');
+  }
+  questionCounter++;
+  nextQuestion();
 }
 
 const quizQuestions = [
