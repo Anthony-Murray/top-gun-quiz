@@ -5,6 +5,27 @@ body {
   color: #36454F;
 }
 
+#quiz-question,
+#game-display {
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 1.5em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin: 10px 0;
+}
+
+#options-container button {
+  font-size: 1.2em;
+  /* Increased font size for the options */
+}
+
+.container {
+  max-width: 800px;
+  /* You can adjust this value to control the container width */
+}
+
+
 .container {
   background-color: rgba(255, 255, 255, 0.041);
   padding: 20px;
