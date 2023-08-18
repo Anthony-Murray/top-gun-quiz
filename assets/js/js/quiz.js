@@ -17,6 +17,12 @@ startButton.addEventListener('click', () => {
 });
 
 let questionCounter = 0;
+let score = 0;
+
+function incrementScore(points) {
+  score += points;
+  document.getElementById('score-counter').innerText = `Current Score: ${score}/5`;
+}
 
 function nextQuestion() {
   const currentQuestion = quizQuestions[questionCounter];
@@ -30,6 +36,7 @@ function nextQuestion() {
 function checkAnswer(selectedOption) {
   const correctAnswer = quizQuestions[questionCounter].answer;
   if (selectedOption === correctAnswer) {
+    incrementScore(1);
     console.log('Correct answer.');
   } else {
     console.log('Wrong answer.');
@@ -37,6 +44,9 @@ function checkAnswer(selectedOption) {
   questionCounter++;
   nextQuestion();
 }
+
+
+
 
 const quizQuestions = [
   {
