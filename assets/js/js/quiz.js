@@ -65,12 +65,29 @@ function endGame() {
 }
 
 playAgainButton.addEventListener('click', () => {
-  playAgainButton.style.display = 'none';
-  optionsContainer.style.display = 'block';
+  resetGame();
+});
+
+function resetGame() {
+
   questionCounter = 0;
   score = 0;
-  nextQuestion();
-});
+
+ 
+  document.getElementById('score-counter').innerText = `Current Score: 0/5`;
+  document.getElementById('question-counter').innerText = `Questions Remaining: 0/5`;
+
+ 
+  document.getElementById('quiz-question').innerText = 'I feel the need, the need for speed! Press Start to Begin!';
+
+ 
+  document.getElementById('options-container').style.display = 'none';
+  document.getElementById('play-again-btn').style.display = 'none';
+
+ 
+  document.getElementById('start-btn').style.display = 'block';
+}
+
 
 const quizQuestions = [
   {
