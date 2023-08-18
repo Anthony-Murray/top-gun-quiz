@@ -7,6 +7,17 @@ startButton.addEventListener('click', () => {
   optionsContainer.style.display = 'block';
 });
 
+let questionCounter = 0;
+
+function nextQuestion() {
+  const currentQuestion = quizQuestions[questionCounter];
+  document.getElementById('quiz-question').innerText = currentQuestion.question;
+  document.getElementById('option-0').innerText = currentQuestion.options[0];
+  document.getElementById('option-1').innerText = currentQuestion.options[1];
+  document.getElementById('option-2').innerText = currentQuestion.options[2];
+  document.getElementById('option-3').innerText = currentQuestion.options[3];
+}
+
 const quizQuestions = [
   {
     answer: 0,
