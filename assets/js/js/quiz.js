@@ -8,6 +8,7 @@ const option2Button = document.getElementById('option-2');
 option2Button.addEventListener('click', () => { checkAnswer(2); });
 const option3Button = document.getElementById('option-3');
 option3Button.addEventListener('click', () => { checkAnswer(3); });
+const playAgainButton = document.getElementById('play-again-btn');
 
 
 startButton.addEventListener('click', () => {
@@ -57,7 +58,19 @@ function checkAnswer(selectedOption) {
   nextQuestion();
 }
 
+function endGame() {
+  document.getElementById('quiz-question').innerText = `Quiz Over! Your final score is ${score}/5`;
+  optionsContainer.style.display = 'none';
+  playAgainButton.style.display = 'block';
+}
 
+playAgainButton.addEventListener('click', () => {
+  playAgainButton.style.display = 'none';
+  optionsContainer.style.display = 'block';
+  questionCounter = 0;
+  score = 0;
+  nextQuestion();
+});
 
 const quizQuestions = [
   {
