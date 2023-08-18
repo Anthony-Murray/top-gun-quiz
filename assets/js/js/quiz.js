@@ -2,6 +2,12 @@ const startButton = document.getElementById('start-btn');
 const optionsContainer = document.getElementById('options-container');
 const option0Button = document.getElementById('option-0');
 option0Button.addEventListener('click', () => { console.log('Option 0 clicked'); });
+const option1Button = document.getElementById('option-1');
+option1Button.addEventListener('click', () => { console.log('Option 1 clicked'); });
+const option2Button = document.getElementById('option-2');
+option2Button.addEventListener('click', () => { console.log('Option 2 clicked'); });
+const option3Button = document.getElementById('option-3');
+option3Button.addEventListener('click', () => { console.log('Option 3 clicked'); });
 
 startButton.addEventListener('click', () => {
   console.log('Test start button.');
