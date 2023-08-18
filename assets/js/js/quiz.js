@@ -58,12 +58,6 @@ function checkAnswer(selectedOption) {
   nextQuestion();
 }
 
-function endGame() {
-  document.getElementById('quiz-question').innerText = `Quiz Over! Your final score is ${score}/5`;
-  optionsContainer.style.display = 'none';
-  playAgainButton.style.display = 'block';
-}
-
 playAgainButton.addEventListener('click', () => {
   resetGame();
 });
